@@ -10,6 +10,7 @@
     "build-prod": "ng build --prod",
     "build-lib": "ng build --prod angular2-grid && npm run copy-lib",
     "copy-lib": "copyfiles -f LICENSE README.md projects/angular2-grid/src/*.css dist/angular2-grid",
+    "publish-lib": "ng build --prod angular2-grid && cd dist/angular2-grid && npm pack --quiet && cp *.tgz ../../package",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
